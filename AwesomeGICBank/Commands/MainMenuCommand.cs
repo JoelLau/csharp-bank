@@ -1,9 +1,22 @@
-namespace AwesomeGICBank.Commands;
+using AwesomeGICBank.Console;
 
-public class MainMenuCommand : ICommand
+
+namespace AwesomeGICBank.Commands
 {
-    public void Run()
+    public class MainMenuCommands(IConsole console) : ICommand
     {
-        Console.WriteLine("Hello, World!");
+        private readonly IConsole _console = console;
+
+        const String MAIN_MENU_PROMPT = @"Welcome to AwesomeGIC Bank! What would you like to do?
+[T] Input transactions 
+[I] Define interest rules
+[P] Print statement
+[Q] Quit
+> ";
+
+        public void Run()
+        {
+            _console.WriteLine(MAIN_MENU_PROMPT);
+        }
     }
 }

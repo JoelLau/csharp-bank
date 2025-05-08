@@ -1,4 +1,7 @@
-﻿using AwesomeGICBank.Commands;
+﻿using AwesomeGICBank.Console;
+using AwesomeGICBank.Commands;
 
-MainMenuCommand mainMenuCommand = new();
-mainMenuCommand.Run();
+SystemConsole console = new();
+MainMenuCommands mainMenuCommands = new(console);
+
+mainMenuCommands.Run();

@@ -1,6 +1,7 @@
-namespace AwesomeGICBank;
-
-public interface ICommand
+namespace AwesomeGICBank.Commands
 {
-    public void Run();
+    public interface ICommand
+    {
+        public void Run();
+    }
 }
